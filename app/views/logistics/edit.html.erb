@@ -1,0 +1,34 @@
+<h1>Редактирование Объявления</h1>
+
+<%= render 'form', logistic: @logistic %>
+
+<p><%= link_to 'Просмотреть', @logistic %></p>
+<p><%= link_to 'Назад', logistics_path %></p>
+<style>
+   /* Стили для заголовка */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Цвет текста */
+  text-align: center; /* Выравнивание по центру */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для ссылок */
+p {
+  font-size: 16px;
+  color: #007bff; /* Цвет ссылок */
+  margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стили для разделителя между ссылками */
+p + p {
+  margin-top: 5px; /* Отступ сверху */
+}
+
+/* Стили для ссылок при наведении */
+p a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+  </style>

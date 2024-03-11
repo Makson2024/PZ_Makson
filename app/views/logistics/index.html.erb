@@ -1,0 +1,86 @@
+<h1>ОтправкиTrade</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Маршрут</th>
+      <th>Описание</th>
+      <th>Цена за перевозку</th>
+      <th>Количество</th>
+      <th colspan="3"></th> <!-- убрал лишнее colspan="5" -->
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @logistics.each do |logistic| %>
+      <tr>
+        <td><%= logistic.title %></td>
+        <td><%= logistic.description %></td>
+        <td><%= logistic.price %></td>
+        <td><%= logistic.quantity %></td>
+        <td><%= link_to 'Просмотреть', logistic %></td>
+        <td><%= link_to 'Редактировать', edit_logistic_path(logistic) %></td>
+        <td><%= link_to 'Удалить', logistic, 'data-turbo-method': :delete, data: { confirm: 'Вы уверены?' } %></td>
+        <td>
+          <%= form_with(url: cart_add_path) do |f| %>
+            <%= f.hidden_field :id, value: logistic.id %>
+            <%= f.number_field :quantity, value: 0, min: 1 %>
+            <%= f.submit "Добавить в закладки", class: "add-to-cart-button" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to 'Добавить объявление', new_logistic_path %></p>
+<style>
+   /* Стили для заголовка */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Цвет текста */
+  text-align: center; /* Выравнивание по центру */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для таблицы */
+table {
+  width: 100%; /* Ширина таблицы на 100% от контейнера */
+  border-collapse: collapse; /* Объединение границ ячеек */
+}
+
+/* Стили для заголовков таблицы */
+th {
+  background-color: #f2f2f2; /* Цвет фона */
+  padding: 10px; /* Отступ внутри ячейки */
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+
+/* Стили для ячеек таблицы */
+td {
+  padding: 8px; /* Отступ внутри ячейки */
+  border-bottom: 1px solid #ddd; /* Горизонтальная линия под ячейкой */
+}
+
+/* Стили для ссылок в ячейках таблицы */
+td a {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #007bff; /* Цвет ссылок */
+  margin-right: 10px; /* Отступ справа */
+}
+
+/* Стили для кнопки "Добавить в закладки" */
+.add-to-cart-button {
+  background-color: #007bff; /* Цвет фона кнопки */
+  color: #fff; /* Цвет текста */
+  border: none; /* Убираем границу */
+  padding: 8px 12px; /* Отступ внутри кнопки */
+  cursor: pointer; /* Изменяем указатель при наведении */
+}
+
+/* Стили для кнопки "Добавить в закладки" при наведении */
+.add-to-cart-button:hover {
+  background-color: #0056b3; /* Изменяем цвет фона при наведении */
+}
+  </style>

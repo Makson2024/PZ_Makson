@@ -1,0 +1,387 @@
+/* ../sessions/new.html.erb */
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.login-form {
+  max-width: 500px;
+  padding: 30px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  color: #343a40; /* Dark gray text */
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.login-form .field {
+  margin-bottom: 20px;
+}
+
+.login-form .field label {
+  display: block;
+  color: #6c757d; /* Gray text */
+  font-size: 14px;
+}
+
+.login-form .field input {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da; /* Light gray border */
+  border-radius: 5px;
+  color: #495057; /* Dark text color */
+  background-color: #fff; /* White background */
+}
+
+.login-form .actions {
+  margin: 20px;
+  text-align: center;
+}
+
+.login-form .actions .btn {
+  padding: 14px 24px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form .actions .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.login-form .error-message {
+  color: #dc3545; /* Red error message */
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6c757d; /* Gray text */
+}
+
+.remember-me input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.login-form .links-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-form .links-container a {
+  color: #343a40; /* Dark gray text */
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.login-form .links-container a:hover {
+  text-decoration: underline;
+}
+
+/* ../registrations/new.html.erb */
+.signup-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.signup-form {
+  max-width: 100%;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2 {
+  color: #343a40;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-form .field {
+  margin-bottom: 20px;
+}
+
+.signup-form .field label {
+  display: block;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.signup-form .field em {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.signup-form .field input {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  color: #495057;
+  background-color: #fff;
+}
+
+.signup-form .actions {
+  margin: 20px;
+  text-align: center;
+}
+
+.signup-form .button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-form .actions .btn {
+  padding: 14px 24px;
+  background-color: #dc3545; /* Red button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form .actions .btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+.signup-form .error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.signup-form .links-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-form .links-container a {
+  color: #343a40;
+  text-decoration: none;
+  margin-bottom: 20px;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.signup-form .links-container a:hover {
+  text-decoration: underline;
+}
+
+/* ../registrations/edit.html.erb */
+.edit-form-container {
+  display: flex;
+}
+
+.edit-form {
+  max-width: 100%;
+  padding: 20px 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form h2 {
+  color: #343a40;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.edit-form .field {
+  margin-bottom: 20px;
+}
+
+.edit-form .field label {
+  display: block;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.edit-form .field em {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.edit-form .field i {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.edit-form .field input {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  color: #495057;
+  background-color: #fff;
+}
+
+.edit-form .actions {
+  margin: 20px;
+  text-align: center;
+}
+
+.edit-form .actions .btn {
+  padding: 14px 24px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-form .actions .btn:hover {
+  background-color: #c0392b;
+}
+
+.edit-form .button_to {
+  margin: 20px 0;
+}
+
+.edit-form .button_to .btn {
+  padding: 14px 24px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-form .button_to .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.edit-form .links-container {
+  margin-top: 20px 0;
+}
+
+.edit-form .links-container a {
+  display: flex;
+  color: #343a40;
+  text-decoration: none;
+  margin-bottom: 20px;
+  margin: 10px 0;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.edit-form .links-container a:hover {
+  text-decoration: underline;
+}
+
+/* ../passwords/new.html.erb */
+.new-password-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.new-password-form {
+  max-width: 100%;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-password-form h2 {
+  color: #343a40;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.new-password-form .field {
+  margin-bottom: 20px;
+}
+
+.new-password-form .field label {
+  display: block;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.new-password-form .field input {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  color: #495057;
+  background-color: #fff;
+}
+
+.new-password-form .actions {
+  margin: 20px;
+  text-align: center;
+}
+
+.new-password-form .actions .btn {
+  padding: 14px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.new-password-form .actions .btn:hover {
+  background-color: #0056b3;
+}
+
+.new-password-form .links-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.new-password-form .links-container a {
+  color: #343a40;
+  text-decoration: none;
+  margin-bottom: 20px;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.new-password-form .links-container a:hover {
+  text-decoration: underline;
+}

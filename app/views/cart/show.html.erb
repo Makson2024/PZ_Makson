@@ -1,0 +1,33 @@
+<h1 class="title">Список заявок</h1>
+<% @cart.orderables.each do |orderable| %>
+  <% logistic = orderable.logistic %>
+  <p class="order-item"><%= logistic.title %> * <%= orderable.quantity %> = $<%= logistic.price * orderable.quantity %></p>
+
+  <%= render partial: "cart/cart" if @render_cart %>
+<% end %>
+<p class="total-amount">Ваша общая сумма за заказы $ <%= @cart.total %> </p>
+<style>
+   h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Цвет текста */
+  text-align: center; /* Выравнивание по центру */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для элементов списка заявок */
+p {
+  font-size: 16px;
+  color: #666; /* Цвет текста */
+  margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стили для общей суммы заказов */
+.total-amount {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000; /* Цвет текста */
+  text-align: right; /* Выравнивание по правому краю */
+  margin-top: 20px; /* Отступ сверху */
+}
+  </style>

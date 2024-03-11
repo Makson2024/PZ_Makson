@@ -1,0 +1,43 @@
+<h1>Информация об объявлениях</h1>
+
+<p><strong>Маршрут:</strong> <%= @logistic.title %></p>
+<p><strong>Описание:</strong> <%= @logistic.description %></p>
+<p><strong>Цена:</strong> <%= @logistic.price %></p>
+<p><strong>Количество:</strong> <%= @logistic.quantity %></p>
+
+<p><%= link_to 'Редактировать', edit_logistic_path(@logistic) %></p>
+<p><%= link_to 'Назад', logistics_path %></p>
+  <style>
+    /* Стили для заголовка */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Цвет текста */
+  text-align: center; /* Выравнивание по центру */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для сильного текста (strong) */
+p strong {
+  font-weight: bold; /* Устанавливаем жирный шрифт */
+}
+
+/* Стили для информационных параграфов */
+p {
+  font-size: 16px;
+  color: #666; /* Цвет текста */
+  margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стили для ссылок */
+p a {
+  font-size: 16px;
+  color: #007bff; /* Цвет ссылки */
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Стили для ссылок при наведении */
+p a:hover {
+  text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+  </style>
